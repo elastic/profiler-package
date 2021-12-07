@@ -1,0 +1,6 @@
+package_paths:
+  - /packages/production
+  - /packages/staging
+  - /packages/snapshot
+  - /packages/profiler-package
+dev_mode: true
