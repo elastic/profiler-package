@@ -1,0 +1,12 @@
+# This should start the environment with the latest snapshots.
+
+version: "3.8"
+services:
+  package-registry:
+    # to use the latest package-registry alone you can use: docker.elastic.co/package-registry/package-registry:master
+    image: docker.elastic.co/package-registry/distribution:production
+    volumes:
+      - ./package-registry.config.yml:/package-registry/config.yml
+      - ./build/integrations/:/packages/profiler-package
+    ports:
+      - "127.0.0.1:8080:8080"

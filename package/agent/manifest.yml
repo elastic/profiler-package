@@ -1,0 +1,22 @@
+format_version: 1.1.0
+name: profiler_agent
+title: Profiler Agent
+description: Whole system profiling agent.
+version: 0.0.1
+categories: ["monitoring"]
+release: ga
+type: integration
+license: basic
+policy_templates:
+  - name: profiler agent
+    title: Profiler Agent Integration
+    description: Interact with profiler agent.
+    multiple: false
+conditions:
+  kibana.version: "^8.0.0"
+icons:
+  - src: "/img/profiler-logo-color-64px.svg"
+    size: "16x16"
+    type: "image/svg+xml"
+owner:
+  github: elastic/profiling
