@@ -5,6 +5,15 @@ This is just the very first step by letting the package registry know about our 
 Elastic Agent itself still needs to learn about these new executables and how to install and run them.
 Finally the gRPC communication between our agents and the Elastic Agents needs to be established.
 
+## Preparation
+
+You need the `elastic-package` tool with versioning. To build the latest version:
+```
+git clone https://github.com/elastic/elastic-package
+cd elastic-package
+make build
+```
+
 ## Building
 
 `make` generates both integration packages, agent and collector.
