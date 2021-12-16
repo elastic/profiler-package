@@ -3,20 +3,17 @@ It is based on based on `elastic/endpoint-package` and `elastic/apm-server/apmpa
 
 This is just the very first step by letting the package registry know about our agents.
 Elastic Agent itself still needs to learn about these new executables and how to install and run them.
-Finally the gRPC communication between our agents and the Elastic Agents needs to be established.
 
-## Preparation
+## Requirements
 
-You need the `elastic-package` tool with versioning. To build the latest version:
+You need to have `elastic-package` installed. You can do this by:
 ```
-git clone https://github.com/elastic/elastic-package
-cd elastic-package
-make build
+go install github.com/elastic/elastic-package
 ```
 
 ## Building
 
-`make` generates both integration packages, agent and collector.
+`make` generates both integration packages for agent and collector.
 
 `make pkgs=agent` creates just the agent package.
 
@@ -26,7 +23,7 @@ make build
 
 `make run-registry` builds the integration packages, pulls and runs the containerized Elastic Package Repository (EPR) together with the integration packages.
 
-## How to test
+## How to test the package registry
 ```
 $ make
 $ make run-registry
@@ -58,7 +55,7 @@ $ curl localhost:8080/search?package=profiler_agent
     ],
     "conditions": {
       "kibana": {
-        "version": "^8.0.0"
+        "version": "^7.0.0"
       }
     },
     "owner": {
@@ -70,3 +67,9 @@ $ curl localhost:8080/search?package=profiler_agent
   }
 ]
 ```
+# How to test the integration with the complete stack
+```
+$ elastic-package stack up
+```
+Then browse to `http://localhost:5601/` and log in as user `elastic` with password `changeme` and
+test the integration.
