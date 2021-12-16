@@ -13,7 +13,7 @@ policy_templates:
     description: Interact with profiler agent.
     multiple: false
 conditions:
-  kibana.version: "^8.0.0"
+  kibana.version: "^7.0.0"
 icons:
   - src: "/img/profiler-logo-color-64px.svg"
     size: "16x16"
