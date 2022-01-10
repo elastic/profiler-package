@@ -34,7 +34,10 @@ clean-package:
 	$(AT)cd package/$(pkg) && \
 	elastic-package clean $(VFLAG)
 
+# Variables:
+# $DISTRIBUTION
+#   snapshot: run snapshot EPR
+#   production: run production EPR (default)
 run-registry: packages
 	docker-compose pull
 	docker-compose up
-

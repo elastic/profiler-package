@@ -22,6 +22,8 @@ go install github.com/elastic/elastic-package
 `make clean` cleans up the build artifacts.
 
 `make run-registry` builds the integration packages, pulls and runs the containerized Elastic Package Repository (EPR) together with the integration packages.
+ By default the 'production' distribution / container is selected. Use the snapshot (or any other) distribution with
+ `DISTRIBUTION=snapshot make run-registry`.
 
 ## How to test the package registry
 ```
