@@ -15,8 +15,8 @@ policy_templates:
 conditions:
   kibana.version: "^7.0.0"
 icons:
-  - src: "/img/profiler-logo-color-64px.svg"
-    size: "16x16"
+  - src: "/img/profiler-logo-color-48px.svg"
+    size: "48x46"
     type: "image/svg+xml"
 owner:
   github: elastic/profiling
