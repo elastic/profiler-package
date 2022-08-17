@@ -11,9 +11,27 @@ type: integration
 license: basic
 policy_templates:
   - name: profiler agent
-    title: Profiler Agent Integration
+    title: Continous Profiler Agent Integration
     description: Interact with profiler agent.
     multiple: false
+    inputs:
+      - type: profiling
+        title: Collect system profiling traces
+        template_path: template.yml.hbs
+        description: Collect system profiling traces
+        vars:
+          - name: profiler.collector
+            title: System profile collector endpoint
+            type: text
+            required: true
+            show_user: true
+            description: URL to the collector.
+          - name: profiler.secretToken
+            title: Authorization
+            type: text
+            required: true
+            show_user: true
+            description: Token used to authenticate the agent.
 conditions:
   kibana.version: "^8.5.0"
 icons:
