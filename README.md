@@ -1,23 +1,16 @@
-This repository contains the experimental integration packages for HA and CA.
-It is based on based on `elastic/endpoint-package` and `elastic/apm-server/apmpackage`.
-
-This is just the very first step by letting the package registry know about our agents.
-Elastic Agent itself still needs to learn about these new executables and how to install and run them.
+This repository contains the experimental integration package for continous profiling.
+It is based on `elastic/endpoint-package` and `elastic/apm-server/apmpackage`.
 
 ## Requirements
 
 You need to have `elastic-package` installed. You can do this by:
 ```
-go install github.com/elastic/elastic-package
+go install github.com/elastic/elastic-package@latest
 ```
 
 ## Building
 
-`make` generates both integration packages for agent and collector.
-
-`make pkgs=agent` creates just the agent package.
-
-`make pkgs=collector` creates just the collector package.
+`make` generates the integration package.
 
 `make clean` cleans up the build artifacts.
 
