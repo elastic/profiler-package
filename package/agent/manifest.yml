@@ -2,7 +2,9 @@ format_version: 1.1.0
 name: profiler_agent
 title: Profiler Agent
 description: Whole system profiling agent.
-version: 0.0.1
+# For the version of this package we use the current version of
+# pf-host-agent for which this package is for.
+version: 2.4.1
 categories: ["monitoring"]
 release: ga
 type: integration
@@ -13,7 +15,7 @@ policy_templates:
     description: Interact with profiler agent.
     multiple: false
 conditions:
-  kibana.version: "^7.0.0"
+  kibana.version: "^8.5.0"
 icons:
   - src: "/img/profiler-logo-color-48px.svg"
     size: "48x46"
