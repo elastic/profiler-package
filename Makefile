@@ -1,5 +1,5 @@
-.PHONY: package packages clean run-registry
-.DEFAULT_GOAL: packages
+.PHONY: package clean run-registry
+.DEFAULT_GOAL: package
 
 # 'make V=1' switches on verbose output
 V ?= 0
@@ -11,25 +11,14 @@ else
 	SFLAG := -s
 endif
 
-pkgs ?= agent collector
-
-packages:
-	$(AT)$(foreach pkg,$(pkgs), \
-		$(MAKE) $(SFLAG) package pkg=$(pkg) || exit ; \
-	)
-
-clean:
-	$(AT)$(foreach pkg,$(pkgs), \
-		$(MAKE) $(SFLAG) clean-package pkg=$(pkg) || exit ; \
-	)
-	$(AT)rm -rf build/
+pkg ?= agent
 
 package:
 	@echo "## Build integration package $(pkg)"
 	$(AT)cd package/$(pkg) && \
 	elastic-package check $(VFLAG)
 
-clean-package:
+clean:
 	@echo "## Clean integration package $(pkg)"
 	$(AT)cd package/$(pkg) && \
 	elastic-package clean $(VFLAG)
