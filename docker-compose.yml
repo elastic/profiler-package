@@ -8,6 +8,6 @@ services:
     image: docker.elastic.co/package-registry/distribution:${DISTRIBUTION:-production}
     volumes:
       - ./package-registry.config.yml:/package-registry/config.yml
-      - ./build/integrations/:/packages/profiler-package
+      - ./build/packages/:/packages/profiler-package
     ports:
       - "127.0.0.1:8080:8080"
