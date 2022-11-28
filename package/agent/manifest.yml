@@ -11,8 +11,8 @@ type: integration
 license: basic
 policy_templates:
   - name: profiler agent
-    title: Continuous Profiler Agent Integration
-    description: Interact with profiler agent.
+    title: Universal Profiling Agent Integration
+    description: Interact with the Universal Profiling agent.
     multiple: false
     inputs:
       - type: profiling
