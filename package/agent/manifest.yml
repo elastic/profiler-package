@@ -5,7 +5,7 @@ description: Whole system profiling agent.
 # For the version of this package we use the current version of
 # pf-host-agent for which this package is for.
 version: 2.4.1
-categories: ["monitoring"]
+categories: ["elastic_stack", "monitoring"]
 release: ga
 type: integration
 license: basic
