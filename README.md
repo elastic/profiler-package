@@ -31,7 +31,7 @@ $ curl localhost:8080/search?package=profiler_agent
     "release": "ga",
     "description": "Whole system profiling agent.",
     "type": "integration",
-    "download": "/epr/profiler_agent/profiler_agent-0.0.1.zip",
+    "download": "/epr/profiler_agent/profiler_agent-2.4.1.zip",
     "path": "/package/profiler_agent/0.0.1",
     "icons": [
       {
@@ -50,7 +50,7 @@ $ curl localhost:8080/search?package=profiler_agent
     ],
     "conditions": {
       "kibana": {
-        "version": "^7.0.0"
+        "version": "^8.5.0"
       }
     },
     "owner": {

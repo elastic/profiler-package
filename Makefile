@@ -27,6 +27,6 @@ clean:
 # $DISTRIBUTION
 #   snapshot: run snapshot EPR
 #   production: run production EPR (default)
-run-registry: packages
+run-registry: package
 	docker-compose pull
 	docker-compose up
