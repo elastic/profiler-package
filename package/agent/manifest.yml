@@ -1,42 +1,47 @@
-format_version: 1.1.0
 name: profiler_agent
-title: Profiler Agent
-description: Whole system profiling agent.
+title: Universal Profiling Agent
 # For the version of this package we use the current version of
 # pf-host-agent for which this package is for.
 version: 2.4.1
 categories: ["elastic_stack", "monitoring"]
 release: ga
-type: integration
+description: Fleet-wide, whole-system, continuous profiling with zero instrumentation.
+conditions:
+  kibana.version: ^8.7.0
+format_version: 1.1.0
+icons:
+  - size: 48x46
+    src: /img/profiler-logo-color-48px.svg
+    type: image/svg+xml
+screenshots:
+  - src: /img/flamegraph-overview.png
+    title: metricbeat aws overview
+    size: 1999x1518
+    type: image/png
 license: basic
 policy_templates:
-  - name: profiler agent
+  - name: Universal Profiling Agent
     title: Universal Profiling Agent Integration
     description: Interact with the Universal Profiling agent.
-    multiple: false
     inputs:
-      - type: profiling
-        title: Collect system profiling traces
+      - title: Collect Universal Profiling traces
+        description: Collect Universal Profiling traces
         template_path: template.yml.hbs
-        description: Collect system profiling traces
+        type: pf-host-agent
         vars:
           - name: profiler.collector
-            title: System profile collector endpoint
-            type: text
+            title: Universal Profiling collector endpoint
+            description: URL to the collector.
             required: true
             show_user: true
-            description: URL to the collector.
+            type: text
           - name: profiler.secret_token
             title: Authorization
-            type: text
+            description: Token used to authenticate the agent.
             required: true
             show_user: true
-            description: Token used to authenticate the agent.
-conditions:
-  kibana.version: "^8.5.0"
-icons:
-  - src: "/img/profiler-logo-color-48px.svg"
-    size: "48x46"
-    type: "image/svg+xml"
+            type: text
+    multiple: false
+type: integration
 owner:
   github: elastic/profiling
