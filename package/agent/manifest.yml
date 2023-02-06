@@ -41,6 +41,11 @@ policy_templates:
             required: true
             show_user: true
             type: text
+          - name: profiler.connect_proxy
+            title: Connect proxy
+            description: URL to proxy connections in the form of http[s]://<user>:<password>@<server name/ip>:<port>
+            show_user: true
+            type: text
     multiple: false
 type: integration
 owner:
