@@ -1,9 +1,13 @@
-This repository contains the experimental integration package for continous profiling.
-It is based on `elastic/endpoint-package` and `elastic/apm-server/apmpackage`.
+This repository contains the experimental integration package for [Universal Profiling](https://www.elastic.co/observability/universal-profiling).
+
+It is based on [elastic/endpoint-package](https://github.com/elastic/endpoint-package) and [elastic/apm-server/apmpackage](https://github.com/elastic/apm-server/tree/main/apmpackage).
+
+**Note: As this integration package is currently considered experimental, it is subject to change and may experience breaking changes. We make a best effort to test the integration package, but we make no guarantees at this time.**
 
 ## Requirements
 
-You need to have `elastic-package` installed. You can do this by:
+You need to have [elastic-package](https://github.com/elastic/elastic-package) installed. You can do this by:
+
 ```
 go install github.com/elastic/elastic-package@latest
 ```
@@ -14,11 +18,12 @@ go install github.com/elastic/elastic-package@latest
 
 `make clean` cleans up the build artifacts.
 
-`make run-registry` builds the integration packages, pulls and runs the containerized Elastic Package Repository (EPR) together with the integration packages.
+`make run-registry` builds the integration packages, pulls and runs the containerized [Elastic Package Repository](https://github.com/elastic/package-registry/) (EPR) together with the integration packages.
  By default the 'production' distribution / container is selected. Use the snapshot (or any other) distribution with
  `DISTRIBUTION=snapshot make run-registry`.
 
 ## How to test the package registry
+
 ```
 $ make
 $ make run-registry
@@ -62,9 +67,12 @@ $ curl localhost:8080/search?package=profiler_agent
   }
 ]
 ```
-# How to test the integration with the complete stack
+
+## How to test the integration with the complete stack
+
 ```
 $ elastic-package stack up
 ```
+
 Then browse to `http://localhost:5601/` and log in as user `elastic` with password `changeme` and
 test the integration.
