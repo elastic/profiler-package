@@ -19,6 +19,7 @@ go install github.com/elastic/elastic-package@latest
  `DISTRIBUTION=snapshot make run-registry`.
 
 ## How to test the package registry
+
 ```
 $ make
 $ make run-registry
@@ -62,9 +63,12 @@ $ curl localhost:8080/search?package=profiler_agent
   }
 ]
 ```
-# How to test the integration with the complete stack
+
+## How to test the integration with the complete stack
+
 ```
 $ elastic-package stack up
 ```
+
 Then browse to `http://localhost:5601/` and log in as user `elastic` with password `changeme` and
 test the integration.
