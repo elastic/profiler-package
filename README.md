@@ -1,9 +1,11 @@
-This repository contains the experimental integration package for continous profiling.
-It is based on `elastic/endpoint-package` and `elastic/apm-server/apmpackage`.
+This repository contains the experimental integration package for [Universal Profiling](https://www.elastic.co/observability/universal-profiling).
+
+It is based on [elastic/endpoint-package](https://github.com/elastic/endpoint-package) and [elastic/apm-server/apmpackage](https://github.com/elastic/apm-server/tree/main/apmpackage).
 
 ## Requirements
 
-You need to have `elastic-package` installed. You can do this by:
+You need to have [elastic-package](https://github.com/elastic/elastic-package) installed. You can do this by:
+
 ```
 go install github.com/elastic/elastic-package@latest
 ```
@@ -14,7 +16,7 @@ go install github.com/elastic/elastic-package@latest
 
 `make clean` cleans up the build artifacts.
 
-`make run-registry` builds the integration packages, pulls and runs the containerized Elastic Package Repository (EPR) together with the integration packages.
+`make run-registry` builds the integration packages, pulls and runs the containerized [Elastic Package Repository](https://github.com/elastic/package-registry/) (EPR) together with the integration packages.
  By default the 'production' distribution / container is selected. Use the snapshot (or any other) distribution with
  `DISTRIBUTION=snapshot make run-registry`.
 
