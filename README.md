@@ -2,6 +2,8 @@ This repository contains the experimental integration package for [Universal Pro
 
 It is based on [elastic/endpoint-package](https://github.com/elastic/endpoint-package) and [elastic/apm-server/apmpackage](https://github.com/elastic/apm-server/tree/main/apmpackage).
 
+**Note: As this integration package is currently considered experimental, it is subject to change and may experience breaking changes. We make a best effort to test the integration package, but we make no guarantees at this time.**
+
 ## Requirements
 
 You need to have [elastic-package](https://github.com/elastic/elastic-package) installed. You can do this by:
