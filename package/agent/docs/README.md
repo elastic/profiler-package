@@ -33,4 +33,4 @@ The minimum supported versions are:
 * Ruby: >= 2.5
 * Perl: >= 5.28
 
-[Learn more](https://elastic.github.io/universal-profiling-documentation)
+[Learn more](https://www.elastic.co/guide/en/observability/current/universal-profiling.html)
