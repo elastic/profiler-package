@@ -20,11 +20,11 @@ screenshots:
     type: image/png
 license: basic
 policy_templates:
-  - name: Universal Profiling Agent
+  - name: universal_profiling_agent
     title: Universal Profiling Agent Integration
-    description: Interact with the Universal Profiling agent.
+    description: Interact with the Universal Profiling Agent.
     inputs:
-      - title: Collect Universal Profiling traces
+      - title: universal_profiling_agent
         description: Collect Universal Profiling traces
         template_path: template.yml.hbs
         type: pf-host-agent
